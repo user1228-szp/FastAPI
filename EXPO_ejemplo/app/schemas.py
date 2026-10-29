@@ -15,3 +15,4 @@ class ProyectoIn(BaseModel):
 
 class Proyecto(ProyectoIn):
     id: int
+
