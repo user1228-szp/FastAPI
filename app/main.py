@@ -1,5 +1,6 @@
+from app.routers import projects
 from fastapi import FastAPI, APIRouter
-from app.routers import projects, evaluation
+from app.routers import evaluation
 
 app = FastAPI(title="Mini Evaluación EXPO IBERO")
 
