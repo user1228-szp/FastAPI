@@ -16,3 +16,16 @@ class ProyectoIn(BaseModel):
 class Proyecto(ProyectoIn):
     id: int
 
+class Resumen(BaseModel):
+    total: int
+    por_categoria: dict[str, int]
+
+class EvaluacionIn(BaseModel):
+    evaluador: str
+    calificacion: int = Field(ge=0, le=10)
+    comentarios: str = ""
+
+
+class Evaluacion(EvaluacionIn):
+    id: int
+    proyecto_id: int
